@@ -1,5 +1,5 @@
 body {
-    padding: 20px;
+	padding: 20px;
 	background-color: rgb(83, 83, 83);
 }
 
@@ -12,7 +12,7 @@ body {
 	cursor: pointer;
 }
 .hamburger__box {
-	width: 40px;
+	width: 35px;
 	height: 24px;
 	display: inline-block;
 	position: relative;
@@ -21,9 +21,9 @@ body {
 	width: 100%;
 	height: 3px;
 	position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
 	background-color: #fff;
 }
 .hamburger__inner::before {
@@ -31,8 +31,8 @@ body {
 	width: 100%;
 	height: 3px;
 	position: absolute;
-    top: -10px;
-    left: 0;
+	top: -10px;
+	left: 0;
 	background-color: #fff;
 }
 .hamburger__inner::after {
@@ -40,7 +40,16 @@ body {
 	width: 100%;
 	height: 3px;
 	position: absolute;
-    top: 10px;
-    left: 0;
+	top: 10px;
+	left: 0;
 	background-color: #fff;
+}
+.hamburger--active .hamburger__inner {
+background-color: transparent;
+}
+.hamburger--active .hamburger__inner::before {
+transform: translateY(10px) rotate(45deg);
+}
+.hamburger--active .hamburger__inner::after{
+  transform: translateY(-10px) rotate(-45deg);  
 }
